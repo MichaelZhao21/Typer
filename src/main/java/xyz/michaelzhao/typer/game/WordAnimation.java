@@ -15,7 +15,9 @@ public class WordAnimation {
     }
 
     public void stop() {
-        timer.cancel();
-        ((Pane) text.getParent()).getChildren().remove(text);
+        if (timer != null)
+            timer.cancel();
+        if (text != null)
+            ((Pane) text.getParent()).getChildren().remove(text);
     }
 }

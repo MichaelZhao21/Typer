@@ -38,6 +38,8 @@ public class GameController {
 
     private Random rand;
 
+    private boolean lost;
+
     /**
      * Method that runs when the game starts
      */
@@ -46,6 +48,9 @@ public class GameController {
         // Create a new game and random instance
         game = new TyperGame();
         rand = new Random(System.currentTimeMillis());
+
+        // Start a new game with the "lost" state being in false
+        lost = false;
 
         // Create a timer that will create a new word every 5 seconds
         globalAnimationTimer = new Timer();
@@ -59,6 +64,9 @@ public class GameController {
 
     @FXML
     protected void onKeyPressed(KeyEvent e) {
+        // If lost, ignore keystrokes
+        if (lost) return;
+
         // If the user presses the enter or space key
         if (e.getCode() == KeyCode.ENTER || e.getCode() == KeyCode.SPACE) {
             // Submit word
