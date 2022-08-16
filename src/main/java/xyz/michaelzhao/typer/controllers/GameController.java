@@ -128,12 +128,12 @@ public class GameController {
 
             // Generate a path
             Path path = new Path();
-            path.getElements().add(new MoveTo(-100, y));
-            path.getElements().add(new LineTo(x, y));
+            path.getElements().add(new MoveTo(-50, y));
+            path.getElements().add(new LineTo(x + 50, y));
 
             // Generate animation
             PathTransition pt = new PathTransition();
-            pt.setDuration(Duration.seconds(8));
+            pt.setDuration(Duration.millis(Settings.WORD_DURATION));
             pt.setPath(path);
             pt.setNode(text);
             pt.setCycleCount(1);
