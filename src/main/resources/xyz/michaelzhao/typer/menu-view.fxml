@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="xyz.michaelzhao.typer.controllers.MenuController"
+      prefHeight="400.0" prefWidth="600.0">
+    <Text fx:id="welcomeText" text="Welcome to Typer">
+      <font>
+         <Font size="24.0" />
+      </font></Text>
+    <Button onAction="#onStartButtonClick" text="Start">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets></Button>
+</VBox>
