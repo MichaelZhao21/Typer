@@ -2,6 +2,7 @@ package xyz.michaelzhao.typer.util;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import xyz.michaelzhao.typer.MainApplication;
@@ -47,5 +48,11 @@ public class StageChanger {
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();
+    }
+
+    public static <T> T getController(String page) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(page));
+        Parent root = fxmlLoader.load();
+        return fxmlLoader.getController();
     }
 }

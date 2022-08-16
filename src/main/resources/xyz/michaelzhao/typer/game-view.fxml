@@ -5,9 +5,15 @@
 <?import javafx.scene.text.*?>
 
 <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.michaelzhao.typer.controllers.GameController">
-    <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-    <HBox alignment="CENTER_LEFT" maxHeight="20" prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 2 5;" VBox.vgrow="NEVER">
-        <TextField fx:id="textInput" prefWidth="500" promptText="Type word..." onKeyPressed="#onKeyPressed" />
-        <Text fx:id="infoText" text="[More text here]" textAlignment="RIGHT" wrappingWidth="500.0" HBox.hgrow="ALWAYS" />
+    <Pane fx:id="wordPane" VBox.vgrow="ALWAYS" />
+    <HBox alignment="CENTER_LEFT" maxHeight="20" prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 0 5;" VBox.vgrow="NEVER">
+        <TextField fx:id="textInput" onKeyPressed="#onKeyPressed" prefWidth="500" promptText="Type word...">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+        <Text fx:id="infoText" text="Type the words that appear!" textAlignment="RIGHT" wrappingWidth="500.0" HBox.hgrow="ALWAYS">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
     </HBox>
 </VBox>
