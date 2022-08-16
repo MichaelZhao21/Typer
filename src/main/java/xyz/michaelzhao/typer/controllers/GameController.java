@@ -70,7 +70,7 @@ public class GameController {
         // If the user presses the enter or space key
         if (e.getCode() == KeyCode.ENTER || e.getCode() == KeyCode.SPACE) {
             // Submit word
-            String text = textInput.getText();
+            String text = textInput.getText().trim().toLowerCase(Locale.ROOT);
             GuessStatus guessStatus = game.guess(text);
 
             // Clear the box
