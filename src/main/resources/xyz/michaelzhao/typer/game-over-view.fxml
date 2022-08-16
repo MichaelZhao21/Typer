@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.text.Font?>
-<?import javafx.geometry.Insets?>
-<VBox alignment="CENTER" spacing="20.0"
-      xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="xyz.michaelzhao.typer.controllers.GameOverController"
-      prefHeight="400.0" prefWidth="600.0">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="xyz.michaelzhao.typer.controllers.GameOverController">
     <Text fx:id="gameOverText" text="Game Over!">
         <font>
-            <Font size="24.0"/>
+            <Font size="24.0" />
         </font>
     </Text>
-    <Text fx:id="scoreText" />
-    <Button onAction="#onStartButtonClick" text="Restart"/>
+    <Text fx:id="scoreText" text="Score: 0" />
+    <Button fx:id="restartButton" disable="true" onAction="#onRestartButtonClick" text="Restart" />
 </VBox>

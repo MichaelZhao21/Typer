@@ -157,11 +157,10 @@ public class GameController {
 
             try {
                 // Transfer game object to game over controller
-                GameOverController newController = StageChanger.getController("game-over-view.fxml");
-                newController.transferData(game);
+                GameOverController newController = StageChanger.change(infoText, "game-over-view.fxml");
 
                 // Move to the game over screen
-                StageChanger.change(infoText, "game-over-view.fxml");
+                newController.transferData(game);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

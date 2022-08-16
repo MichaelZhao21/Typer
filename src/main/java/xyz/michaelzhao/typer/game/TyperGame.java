@@ -69,7 +69,7 @@ public class TyperGame {
             score++;
             currentWords.remove(text);
             return GuessStatus.CORRECT;
-        } else if (!dictionary.contains(text)) {
+        } else if (dictionary.contains(text)) {
             // Otherwise, check if the word is in the dictionary
             return GuessStatus.WRONG;
         }
