@@ -21,7 +21,7 @@ public class GameOverController {
     @FXML
     public Text scoreText;
 
-    public TyperGame game;
+    private TyperGame game;
 
     @FXML
     protected void onRestartButtonClick() throws IOException {
