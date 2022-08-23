@@ -4,12 +4,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="xyz.michaelzhao.typer.controllers.GameOverController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.michaelzhao.typer.controllers.GameOverController">
     <Text fx:id="gameOverText" text="Game Over!">
         <font>
             <Font size="24.0" />
         </font>
     </Text>
-    <Text fx:id="scoreText" text="Score: 0" />
+    <Text fx:id="scoreText" text="Score: 0">
+      <font>
+         <Font name="Comic Sans MS" size="13.0" />
+      </font></Text>
     <Button fx:id="restartButton" disable="true" onAction="#onRestartButtonClick" text="Restart" />
 </VBox>

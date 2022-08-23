@@ -118,7 +118,7 @@ public class GameController {
     private Text createAnimation(String word) {
         // Create the text object
         Text text = new Text(word);
-        text.setFont(new Font(24));
+        text.setFont(Font.font("Comic Sans MS" ,24));
 
         // Run the animation on the FX App thread
         Platform.runLater(() -> {

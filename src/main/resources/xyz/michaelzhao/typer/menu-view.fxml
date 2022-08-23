@@ -4,15 +4,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0"
-      xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="xyz.michaelzhao.typer.controllers.MenuController"
-      prefHeight="400.0" prefWidth="600.0">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.michaelzhao.typer.controllers.MenuController">
     <Text fx:id="welcomeText" text="Welcome to Typer">
         <font>
-            <Font size="24.0"/>
+            <Font name="Comic Sans MS" size="24.0" />
         </font>
     </Text>
-    <Button onAction="#onStartButtonClick" text="Start"/>
+    <Button onAction="#onStartButtonClick" text="Start">
+      <font>
+         <Font name="Comic Sans MS" size="13.0" />
+      </font></Button>
 </VBox>
